@@ -148,7 +148,7 @@ void os_keypress(usbdevice* kb, int scancode, int down){
             return;
         event.type = EV_REL;
         event.code = REL_WHEEL;
-        event.value = (scancode == BTN_WHEELUP ? 1 : -1);
+        event.value = (scancode == BTN_WHEELUP ? -15 : 15);
         is_mouse = 1;
     } else {
         // Mouse buttons and key events are both EV_KEY. The scancodes are already correct, just remove the ckb bit
